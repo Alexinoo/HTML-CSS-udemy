@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      CSS Tutorial - CSS Specificity (element > class > id > inline )
+    </title>
+    <style>
+      .container {
+        max-width: 60rem;
+        height: auto;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+        margin: 3rem auto;
+        padding: 0.5rem;
+        background-color: #880017;
+        color: white;
+        border-radius: 12px;
+      }
+
+      .title h1 {
+        font-size: 24px;
+        text-align: center;
+        letter-spacing: 1.5px;
+        text-transform: capitalize;
+      }
+
+      .underline {
+        width: 100%;
+        height: 3px;
+        background-color: #f15025;
+      }
+
+      .intro ul li {
+        list-style-position: outside;
+        margin: 16px 16px;
+        font-size: 24px;
+      }
+
+      .intro ul li::before {
+        content: '\2022';
+        color: red;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+
+      h2 {
+        text-decoration: underline;
+      }
+
+      h2,
+      h3,
+      p {
+        text-align: center;
+      }
+
+      /* Specificity */
+
+      #red {
+        color: red;
+      }
+
+      .special {
+        color: green;
+      }
+
+      p {
+        color: red;
+      }
+
+      /* more code here.. */
+
+      p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS Specificity</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>What is Specificity..?</li>
+          <li>
+            If there are two or more CSS rules that point to the same element,
+            the selector with the highest specificity value will "win", and its
+            style declaration will be applied to that HTML element.
+          </li>
+          <li>
+            Think of specificity as a score/rank that determines which style
+            declaration is ultimately applied to an element.
+          </li>
+          <li>
+            Multiple ways of selecting elements e.g. (#id / .class / element) -
+            But who takes precedent ?
+          </li>
+          <li>The class selector takes precedent over the element selector</li>
+          <li>The id selector takes precedent over the class selector</li>
+          <li>
+            inline style is given the highest priority (takes precedent over
+            rest)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <h2>See Example Below</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, odio!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, odio!</p>
+    <p class="special" id="red" style="color: pink">
+      I am a praragraph with a class of special
+    </p>
+    <h3>I am heading</h3>
+  </body>
+</html>
