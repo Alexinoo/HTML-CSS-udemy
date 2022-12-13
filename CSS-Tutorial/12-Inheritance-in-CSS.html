@@ -48,9 +48,13 @@
       /* Inheritance in Action */
       .inheritance {
         color: red;
+        font-family: monospace;
+        line-height: 1.5;
+        font-size: 20px;
       }
       .special {
         color: blue;
+        font-size: 30px;
       }
     </style>
   </head>
@@ -75,6 +79,11 @@
             However, if individual child has it's own styles , they will
             overwrite the styles from the parent &lt;div&gt;
           </li>
+          <li>
+            Note : This applies only for matching properties - The child will
+            still inherit other elements from the parent , if it does not
+            specify it's own
+          </li>
         </ul>
       </div>
     </div>
@@ -88,7 +97,10 @@
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, eveniet!
       </p>
-      <p class="special">I have my own styles</p>
+      <p class="special">
+        I have my own styles though I am inheriting some from my parent
+        &lt;div&gt
+      </p>
       <h2>I am heading</h2>
     </div>
   </body>
