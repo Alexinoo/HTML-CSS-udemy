@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS Units - em Units</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    .nested li {
+      font-size: 10px;
+    }
+
+    /* em units - relative units - depend on the parent */
+
+    .content {
+      text-align: center;
+      font-size: 10px;
+    }
+
+    .relative {
+      font-size: 2em;
+    }
+
+    .absolute {
+      font-size: 32px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS Units - em Units</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>RELATIVE - depends on parent (if no parent - default browser)</li>
+          <li>1em - 16px of the default browser style</li>
+          <li>1em - base value (16px) * number(1) = 16px</li>
+          <li>2em - base value (16px) * number(2) = 32px</li>
+          <li>2em - base value (10px) * number(2) = 20px</li>
+
+          <li>
+            settings on browser > Appearance > font size
+            <ul class="nested">
+              <li>Very small</li>
+              <li>small</li>
+              <li>Medium(Recommended) 16px</li>
+              <li>Large</li>
+              <li>Very large</li>
+            </ul>
+          </li>
+          <li>
+            Falls back to 16px(default browser) if no font size is set for the
+            parent
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <h3 class="relative">I'm relative</h3>
+    </div>
+    <div class="content">
+      <h3 class="absolute">I'm absolute</h3>
+    </div>
+  </body>
+</html>
