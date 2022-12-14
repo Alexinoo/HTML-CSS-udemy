@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS HEX color</title>
+  </head>
+  <style>
+    .container {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 18px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    .content {
+      max-width: 40rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    span {
+      font-size: 16px;
+    }
+
+    /* HEX color */
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>HEX or Hexadecimal Colors</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            There are four numbering systems :
+            <span>Hexadecimal (Base 16 or hex)</span>,
+            <span>decimal (base 10)</span>, <span>binary (base 2)</span> and
+            <span>octal (base 10).</span>
+          </li>
+          <li>
+            Hex consists of 16 possible digit values from 0 to 9, followed by
+            six alphabetic characters -- A[10], B[11], C[12], D[13], E[14] and
+            F[15]
+          </li>
+          <li>
+            A Hex color is specified with: #RRGGBB, where the RR (red), GG
+            (green) and BB (blue) hexadecimal integers specify the components of
+            the color.
+          </li>
+          <li>
+            In CSS, a color can be specified using a hex value in the form:
+          </li>
+          <li>
+            #rrggbb
+            <ul>
+              <li>
+                Where the 2 values range between 00 and ff (same as decimal
+                0-255).
+                <ul>
+                  <li>first 2 values (rr) rep red</li>
+                  <li>next 2 values (gg) rep green</li>
+                  <li>The last 2 values (bb) rep blue</li>
+                </ul>
+              </li>
+              <li>
+                e.g, #ff0000 is displayed as red, because red is set to its
+                highest value (ff) and the others are set to the lowest value
+                (00).
+                <ul>
+                  <li>#000000 - display black</li>
+                  <li>
+                    #fffff - display white, All values are set ff - same as
+                    255,255,255
+                  </li>
+                  <li>
+                    #00ff00 - display green, The middle values are set to its
+                    highest value ff
+                  </li>
+                  <li>
+                    #0000ff - display blue, The last values are set to its
+                    highest value ff
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            #rgb (3 Digit HEX Value )- is a shorthand for #rrggbb where :-
+            <ul>
+              <li>
+                r, g, and b represent the red, green, and blue components with
+                values between 0 and f.
+              </li>
+              <li>
+                3-digit hex code are only used when both values (RR, GG, and BB)
+                are the same for each component
+              </li>
+              <li>e.g. #ff00cc, it can be written like : #f0c</li>
+              <li>e.g. #ffcc99, it can be written like : #fc9</li>
+              <li>e.g. #ff00ff, it can be written like : #f0f</li>
+              <li>e.g. #bb5588, it can be written like : #b58</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <h1>Specify colors using HEX values</h1>
+
+      <h2 style="background-color: #ff0000">#ff0000</h2>
+      <h2 style="background-color: #0000ff">#0000ff</h2>
+      <h2 style="background-color: #3cb371">#3cb371</h2>
+      <h2 style="background-color: #ee82ee">#ee82ee</h2>
+      <h2 style="background-color: #ffa500">#ffa500</h2>
+      <h2 style="background-color: #6a5acd">#6a5acd</h2>
+    </div>
+  </body>
+</html>
