@@ -1,0 +1,21 @@
+/* styles */
+body {
+  background: #f1f5f9;
+}
+
+.container {
+  background: #fff;
+}
+
+/* all the <h3> */
+/* h3 {
+  color: #645cff;
+} */
+
+/* only the h3 inside the <div> */
+div h3 {
+  color: #645cff;
+}
+.special-container {
+  background: rgba(0, 0, 0, 0.9);
+}
