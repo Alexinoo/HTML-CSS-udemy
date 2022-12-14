@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS RGBA() color</title>
+  </head>
+  <style>
+    .container {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 18px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    .content {
+      max-width: 20rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    span {
+      font-size: 16px;
+    }
+
+    /* RGBA color */
+
+    /* 
+
+    CSS Syntax :   rgba(red, green, blue, alpha)
+
+    alpha - means (transparency / opacity) 
+    0 - 1
+
+    where 0 - Not visible
+          0.5 - Less transparent
+          1 - Fully visible
+
+    RED
+    rgba(255, 0, 0, 1); - opaque
+    rgba(255, 0, 0, 0.5); - transparent
+    rgba(255, 0, 0, 0); - Not visible
+    
+    */
+    #p1 {
+      background-color: rgba(255, 0, 0, 0.3);
+    }
+    #p2 {
+      background-color: rgba(0, 255, 0, 0.3);
+    }
+    #p3 {
+      background-color: rgba(0, 0, 255, 0.3);
+    }
+    #p4 {
+      background-color: rgba(192, 192, 192, 0.3);
+    }
+    #p5 {
+      background-color: rgba(255, 255, 0, 0.3);
+    }
+    #p6 {
+      background-color: rgba(255, 0, 255, 0.3);
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>RGBA Colors</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            rgba() function define colors using the Red-green-blue-alpha (RGBA)
+            model.
+          </li>
+          <li>
+            RGBA color values are an extension of RGB color values with an alpha
+            channel - which specifies the opacity of the color.
+          </li>
+          <li>
+            CSS Syntax :rgba(red, green, blue, alpha)
+            <ul>
+              <li>
+                red -
+                <span
+                  >Defines the intensity of red as an integer between 0 and 255,
+                  or as a percentage value between 0% and 100%</span
+                >
+              </li>
+              <li>
+                green -
+                <span
+                  >Defines the intensity of green as an integer between 0 and
+                  255, or as a percentage value between 0% and 100%</span
+                >
+              </li>
+              <li>
+                blue -
+                <span
+                  >Defines the intensity of blue as an integer between 0 and
+                  255, or as a percentage value between 0% and 100%</span
+                >
+              </li>
+              <li>
+                alpha -
+                <span
+                  >Defines the opacity as a number between 0.0 (fully
+                  transparent) and 1.0 (fully opaque)</span
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <p>RGB colors with opacity:</p>
+      <p id="p1">Red</p>
+      <p id="p2">Green</p>
+      <p id="p3">Blue</p>
+      <p id="p4">Grey</p>
+      <p id="p5">Yellow</p>
+      <p id="p6">Cerise</p>
+    </div>
+  </body>
+</html>
