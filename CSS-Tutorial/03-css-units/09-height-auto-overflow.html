@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - Height:auto & Overflow properties</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    h2 {
+      color: #ff0000;
+      font-size: 60px;
+    }
+
+    /* Height :auto & Overflow properties */
+
+    * {
+      margin: 0;
+    }
+
+    .navbar {
+      background: #0000ff;
+      height: 100px;
+      color: #fff;
+      font-size: 3rem;
+    }
+
+    .banner {
+      background: red;
+      height: calc(100vh - 100px);
+    }
+
+    .example {
+      background: #0f0;
+      width: 10rem;
+      height: 25rem;
+      overflow: hidden;
+      overflow: scroll;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Height : auto</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>The height property sets the height of an element.</li>
+
+          <li>
+            Height is set to auto by default and the element will automatically
+            adjust its height to allow its content to be displayed correctly.
+          </li>
+          <li>
+            Content placed between div.example determines the height of the div
+          </li>
+          <li>
+            If there is more content, the height of the div is going to depend
+            on that content
+          </li>
+          <li>
+            If height is set to a numeric value (e.g px, (r)em,or %) and the
+            content does not fit within the specified height, it will overflow.
+          </li>
+          <li>
+            How the container will handle the overflowing content is defined by
+            the overflow property.(hidden / scroll) values
+          </li>
+          <li>
+            Setting overflow : hidden though - Means that all the extra text
+            that is past 25rem is going to be hidden
+          </li>
+          <li>
+            To see the rest of the text, we can add overflow:scroll which allows
+            us to scroll and see the rest of the content that was hidden
+          </li>
+          <li>see example below &dArr;</li>
+        </ul>
+      </div>
+    </div>
+    <div class="example">
+      <p>some text here</p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa,
+      maxime iure aspernatur itaque obcaecati voluptas doloremque neque
+      molestias non vitae esse ea iusto provident dolor suscipit. Nisi id
+      sapiente fugit quo earum veritatis corporis nihil sint dolorum ipsa sed
+      maiores ad optio molestias provident autem consequatur dicta cum ullam
+      magni, voluptate culpa harum! Tempore iste, nulla necessitatibus dolores
+      rerum illum assumenda, voluptas error, corporis voluptatibus amet ullam
+      quas! Repellat sequi, reprehenderit id voluptates dignissimos eos nesciunt
+      itaque dolorem laborum quae maxime ab repudiandae corporis sunt quisquam
+      perferendis eius tempore unde ducimus odit. Debitis architecto fugiat
+      excepturi, voluptatum assumenda labore!
+      <p>some other text</p>
+    </div>
+  </body>
+</html>
