@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - Height : min-height property</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    h2 {
+      color: #ff0000;
+      font-size: 60px;
+    }
+
+    /* Height : min-height property*/
+
+    * {
+      margin: 0;
+    }
+
+    .navbar {
+      background: #0000ff;
+      height: 6rem;
+      color: #fff;
+      font-size: 3rem;
+    }
+
+    .banner {
+      background: red;
+      /* height: calc(100vh - 6rem); */
+      min-height: calc(100vh - 6rem);
+    }
+
+    .example {
+      background: #0f0;
+      width: 10rem;
+      height: 25rem;
+      overflow: hidden;
+      overflow: scroll;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Height : min-height property</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            The min-height property defines the minimum height of an element.
+          </li>
+          <li>
+            If the content is smaller than the minimum height, the minimum
+            height will be applied.
+          </li>
+          <li>
+            If the content is larger than the minimum height, the min-height
+            property has no effect.
+          </li>
+          <li>see example below &dArr;</li>
+        </ul>
+      </div>
+    </div>
+    <ul class="navbar">
+      <li>some link</li>
+    </ul>
+    <div class="banner">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error amet natus
+      accusantium deleniti excepturi porro. Voluptatem blanditiis saepe dolores
+      fugit corporis optio autem, sed consequuntur laborum sequi vero molestiae
+      qui totam dolorem! Voluptatibus nesciunt illum est, repellat deserunt,
+      sunt ullam vitae ut nobis voluptatum sit harum. Dolorum eum iste iure nemo
+      quasi sapiente alias debitis consequuntur repudiandae temporibus minima
+      reprehenderit deleniti cumque quis, nisi consequatur maxime itaque impedit
+      tenetur, voluptatum aut, exercitationem perspiciatis distinctio ratione!
+      Alias consequuntur commodi natus necessitatibus aliquam fugiat incidunt a
+      sapiente deserunt architecto facilis fugit reiciendis impedit error, omnis
+      voluptate cupiditate iusto corporis dicta. Culpa labore nesciunt eaque et
+      ex cum repellat ad maiores commodi nisi ipsum, nobis, quidem officiis.
+      Recusandae repellat pariatur delectus corporis distinctio asperiores sed,
+      necessitatibus temporibus cum magnam unde saepe eaque itaque doloremque
+      rerum perferendis at facilis similique. Quam rerum amet magnam iusto
+      debitis, non libero excepturi voluptatem laboriosam error consequuntur
+      harum unde a at obcaecati quae ab quibusdam ad adipisci. Animi architecto
+      provident aut ipsum labore voluptas corporis quasi nostrum hic fugiat,
+      esse facere, rerum velit amet, commodi nemo? Ex aliquid doloribus earum
+      architecto aliquam natus reprehenderit quaerat quos eos, cum maiores
+      deleniti, tempora, eveniet nobis eaque. Consectetur omnis facere doloribus
+      animi consequatur, ad ipsa dicta quisquam excepturi nostrum quaerat qui
+      labore nesciunt reiciendis dolorem sapiente explicabo magni enim vitae
+      tempora est fuga. A perspiciatis temporibus blanditiis voluptates sed
+      magni asperiores, sequi ad ex ipsam unde dolore optio enim praesentium
+      eius, iure facere corporis ipsa exercitationem odio nihil, natus hic?
+      Voluptates delectus ducimus autem fugit necessitatibus! Voluptatem totam
+      magni, aspernatur repellendus ipsum enim nobis veniam repellat
+      reprehenderit minus quod dolorum voluptas delectus aliquid est? Provident
+      molestias earum optio sunt, voluptatem ad animi quae architecto corrupti?
+      Assumenda accusantium veritatis delectus dignissimos nobis ducimus natus,
+      numquam ut placeat? Corrupti veritatis non architecto! Accusantium saepe
+      sunt, hic, maiores in sed soluta reiciendis sequi quo magni illo beatae
+      architecto omnis quidem minima atque ipsa dolorum officia veritatis.
+      Quaerat corrupti quas facilis, aspernatur quo exercitationem sed? Officiis
+      ut molestiae corporis numquam repellat in, esse inventore nam, nihil
+      consequatur, tempora neque deleniti libero autem facilis ullam saepe!
+      Veniam nobis eveniet, quam modi delectus cum magni libero dolores
+      inventore ad harum esse eos quia explicabo et tenetur natus culpa facilis.
+      Quam sed corporis possimus soluta, quos incidunt eligendi atque temporibus
+      eum praesentium in minima accusamus natus enim expedita dolor dicta
+      numquam. Vitae dolorem odio, mollitia autem fuga distinctio!
+    </div>
+    <div class="example">
+      <p>some text here</p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa,
+      maxime iure aspernatur itaque obcaecati voluptas doloremque neque
+      molestias non vitae esse ea iusto provident dolor suscipit. Nisi id
+      sapiente fugit quo earum veritatis corporis nihil sint dolorum ipsa sed
+      maiores ad optio molestias provident autem consequatur dicta cum ullam
+      magni, voluptate culpa harum! Tempore iste, nulla necessitatibus dolores
+      rerum illum assumenda, voluptas error, corporis voluptatibus amet ullam
+      quas! Repellat sequi, reprehenderit id voluptates dignissimos eos nesciunt
+      itaque dolorem laborum quae maxime ab repudiandae corporis sunt quisquam
+      perferendis eius tempore unde ducimus odit. Debitis architecto fugiat
+      excepturi, voluptatum assumenda labore!
+      <p>some other text</p>
+    </div>
+  </body>
+</html>
