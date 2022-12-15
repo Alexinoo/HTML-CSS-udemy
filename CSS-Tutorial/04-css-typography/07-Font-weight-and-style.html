@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - Font Weight and Font Styles</title>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&family=Trade+Winds&display=swap');
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h2 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 18px;
+    }
+
+    .content {
+      max-width: 60rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      text-align: center;
+      min-height: 7rem;
+    }
+
+    /* Font Weight and Font Styles */
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .main-heading {
+      font-family: 'Trade Winds', cursive;
+    }
+
+    .sub-heading {
+      font-style: italic;
+    }
+    .one {
+      font-weight: bold;
+    }
+    .two {
+      font-weight: lighter;
+      font-style: italic;
+      font-style: oblique;
+      font-style: normal;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h2>Font Weight and Font Styles</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            Font Weight -
+            <span>defines how thick/thin characters in text should be</span>
+          </li>
+          <li>
+            Font Style -
+            <span>sets font style for a text</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <h3 class="main-heading">hey dude i'm main heading</h3>
+      <p class="one">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, iure
+        esse dicta pariatur dolorum perspiciatis eius tempora nostrum impedit
+        temporibus fugiat molestiae laudantium sint consequatur libero cum omnis
+        adipisci ratione!
+      </p>
+
+      <h3 class="sub-heading">hey dude i'm sub-heading</h3>
+      <p class="two">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, iure
+        esse dicta pariatur dolorum perspiciatis eius tempora nostrum impedit
+        temporibus fugiat molestiae laudantium sint consequatur libero cum omnis
+        adipisci ratione!
+      </p>
+    </div>
+  </body>
+</html>
