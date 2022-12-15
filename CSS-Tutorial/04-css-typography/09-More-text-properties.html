@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - More Text properties</title>
+  </head>
+  <style>
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h2 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 18px;
+    }
+
+    .content {
+      max-width: 60rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      min-height: 7rem;
+      padding: 12px 24px;
+    }
+
+    /* More Text properties */
+    /* if number relative to font-size of the element */
+    /* line height */
+    .content {
+      /* line-height: 30px; */
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    /* letter-spacing */
+    .one {
+      letter-spacing: 0.5rem;
+    }
+
+    /* word-spacing */
+    .two {
+      word-spacing: 10px;
+    }
+
+    /* text-decoration/line- */
+    a {
+      font-size: 2rem;
+      text-decoration: none;
+    }
+    .heading-one {
+      /* text-decoration: underline; */
+    }
+
+    /* text-transform */
+    .heading-one {
+      text-transform: uppercase;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h2>More Text properties</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            line-height - if number * font-size (relative to the font-size)
+          </li>
+          <li>letter-spacing - spacing between letters</li>
+          <li>word-spacing - spacing between words</li>
+          <li>
+            text-transform
+            <ul>
+              <li>UPPERCASE</li>
+              <li>lowercase</li>
+              <li>Capitalize</li>
+            </ul>
+          </li>
+          <li>
+            text-decoration
+            <ul>
+              <li>none</li>
+              <li>underline</li>
+              <li>line-through</li>
+              <li>overline</li>
+            </ul>
+          </li>
+          <li style="font-weight: bolder; font-style: italic">
+            see example below &DownArrow;
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <a href="#">google</a>
+      <h1 class="heading-one">heading one</h1>
+      <p class="one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia labore
+        natus a fuga quaerat impedit magnam cupiditate optio unde ipsum!
+      </p>
+      <p class="two">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab officiis
+        tempora sint recusandae veniam, consequatur amet minus harum iure
+        deserunt?
+      </p>
+      <p class="three">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. At tenetur
+        quaerat iure a explicabo architecto eum minus vero. Velit, modi!
+      </p>
+    </div>
+  </body>
+</html>
