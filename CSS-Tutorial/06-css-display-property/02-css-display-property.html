@@ -12,7 +12,7 @@
     }
 
     .container {
-      max-width: 45rem;
+      max-width: 60rem;
       height: auto;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
       margin: 3rem auto;
@@ -38,7 +38,7 @@
     .intro ul li {
       list-style-position: outside;
       margin: 16px 16px;
-      font-size: 24px;
+      font-size: 20px;
     }
 
     .intro ul li::before {
@@ -48,6 +48,20 @@
       display: inline-block;
       width: 1em;
       margin-left: -1em;
+    }
+
+    /* Display Property : Block / inline */
+    .block {
+      background: #0000ff;
+      color: #fff;
+      display: inline;
+      /* display: block; - set by default */
+    }
+    .inline {
+      background: #ff0000;
+      color: #fff;
+      display: block;
+      /* display: inline; - set by default */
     }
   </style>
 
@@ -59,16 +73,57 @@
       </div>
       <div class="intro">
         <ul>
+          <li>All elements have display property set by default</li>
+          <li>
+            The value might be different but the property will always be there
+            right from the get go
+          </li>
           <li>
             The display property specifies the display behavior (the type of
             rendering box) of an element.
           </li>
-          <li>block</li>
-          <li>inline</li>
-          <li>inline-block</li>
-          <li>box-sizing : border-box</li>
+          <li>
+            Display property values include :
+            <ul>
+              <li>
+                Block -
+                <span>
+                  Always starts on a new line, and takes up the whole
+                  width</span
+                >
+              </li>
+              <li>
+                Inline -
+                <span
+                  >Does not start on a new line and spans only content (takes
+                  only the width of the content)</span
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            With CSS , we can control this behavior - we can flip this
+            <ul>
+              <li>display inline elements as block elements</li>
+              <li>display block elements as inline elements</li>
+            </ul>
+          </li>
+
+          <li>download image from(https://www.pexels.com/)</li>
         </ul>
       </div>
     </div>
+    <div class="block">i'm block element</div>
+    <h1 class="block">i'm block element</h1>
+    <p class="block">i'm block element</p>
+
+    <span class="inline">i'm inline element</span>
+    <a href="" class="inline">i'm inline element</a>
+    <img
+      src="../../HTML_Tutorial//images/smoothie.webp"
+      alt="smoothie"
+      class="inline"
+      width="100"
+    />
   </body>
 </html>
