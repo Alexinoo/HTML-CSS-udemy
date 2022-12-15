@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - Text-align and Text-indent property</title>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&family=Trade+Winds&display=swap');
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h2 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 18px;
+    }
+
+    .content {
+      max-width: 60rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      min-height: 7rem;
+    }
+
+    /* Text-align and Text-indent property */
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .main-heading {
+      font-family: 'Trade Winds', cursive;
+      text-align: center;
+    }
+
+    .sub-heading {
+    }
+    .one {
+    }
+    .two {
+      text-align: right;
+      text-indent: 50px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h2>text-align and text-indent property</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            text-align - used to align content inside a BLOCK-LEVEL element.
+            <ul>
+              <li>
+                left -
+                <span
+                  >every content inside a block-level element is aligned to the
+                  left by default</span
+                >
+              </li>
+              <li>
+                right -
+                <span>
+                  pushes the content inside a block-level element to the
+                  right.</span
+                >
+              </li>
+              <li>
+                center - <span>spaces are created on the left and right</span>
+              </li>
+              <li>
+                justify -
+                <span
+                  >lines up the content on the left and right edges of the
+                  block-level element (the box)</span
+                >
+              </li>
+              <li>inherit</li>
+            </ul>
+          </li>
+          <li>
+            text-indent - specifies the indentation of the first line in a
+            text-block
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <h3 class="main-heading">hey dude i'm main heading</h3>
+      <p class="one">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, iure
+        esse dicta pariatur dolorum perspiciatis eius tempora nostrum impedit
+        temporibus fugiat molestiae laudantium sint consequatur libero cum omnis
+        adipisci ratione!
+      </p>
+
+      <h3 class="sub-heading">
+        hey dude i'm sub-heading (paragraph below is indented)
+      </h3>
+      <p class="two">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, iure
+        esse dicta pariatur dolorum perspiciatis eius tempora nostrum impedit
+        temporibus fugiat molestiae laudantium sint consequatur libero cum omnis
+        adipisci ratione!
+      </p>
+    </div>
+  </body>
+</html>
