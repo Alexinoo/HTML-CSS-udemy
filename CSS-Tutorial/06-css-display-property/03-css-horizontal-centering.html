@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Display Property - Horizontal Centering</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    /* Display Property : Horizontal Centering */
+    .block {
+      background: #0000ff;
+      color: #fff;
+      max-width: 25rem;
+      margin: 0 auto;
+      /* margin-left: auto; */
+      /* margin-right: auto; */
+    }
+    .inline {
+      background: #ff0000;
+      color: #fff;
+    }
+
+    .parent-div {
+      text-align: center;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS Display Property - Horizontal Centering</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            Centering Block level Elements :
+            <ul>
+              <li>
+                Give it some kind of width (max-width /width) - otherwise it
+                will be spanning all across the width
+              </li>
+              <li>
+                Decide what margin we will give to top/bottom (0+) and set
+                margin left/right to auto
+              </li>
+              <li>
+                margin left/right must be auto !! - can also be written
+                separately
+                <ul>
+                  <li>margin-left : 0</li>
+                  <li>margin-right : 0</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Centering Inline level Elements :
+            <ul>
+              <li>Set text-align to center for the parent element</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="block">i'm block element</div>
+    <h1 class="block">i'm block element</h1>
+    <p class="block">i'm block element</p>
+
+    <div class="parent-div">
+      <span class="inline">i'm inline element</span>
+      <a href="" class="inline">i'm inline element</a>
+      <img
+        src="../../HTML_Tutorial//images/smoothie.webp"
+        alt="smoothie"
+        class="inline"
+        width="100"
+      />
+    </div>
+  </body>
+</html>
