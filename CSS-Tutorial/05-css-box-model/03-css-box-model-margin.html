@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS Box Model - Margin</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 18px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 18px;
+    }
+
+    /* CSS BOX MODEL - Margin */
+    * {
+      margin: 0;
+    }
+
+    h2 {
+      background: #ff0000;
+      padding: 20px;
+      margin: 3rem;
+    }
+
+    h2,
+    p {
+      color: #fff;
+    }
+
+    p {
+      background: #0000ff;
+      padding: 5px 20px 50px 40px;
+      /* margin: 20px 40px; */
+      margin: 4rem 4px 50px 10px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS Box Model - Margin</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            Margins are used to create space around elements, outside of any
+            defined borders.
+          </li>
+          <li>
+            The CSS margin properties are used to create space around elements,
+            outside of any defined borders.
+          </li>
+          <li>
+            CSS has properties for setting the margin for each side of an
+            element (top, right, bottom, and left).
+          </li>
+          <li>
+            If the margin property has four values:
+            <ul>
+              <li>
+                margin: 25px 50px 75px 100px;
+                <ul>
+                  <li>top margin is 25px</li>
+                  <li>right margin is 50px</li>
+                  <li>bottom margin is 75px</li>
+                  <li>left margin is 100px</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            If the margin property has three values:
+            <ul>
+              <li>
+                margin: 25px 50px 75px;
+                <ul>
+                  <li>top margin is 25px</li>
+                  <li>right and left margins are 50px</li>
+                  <li>bottom margin is 75px</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            If the margin property has two values:
+            <ul>
+              <li>
+                margin: 25px 50px;
+                <ul>
+                  <li>top and bottom margins are 25px</li>
+                  <li>right and left margins are 50px</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            If the margin property has one value:
+            <ul>
+              <li>
+                margin: 25px;
+                <ul>
+                  <li>all four margins are 25px</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <h2>I would like to learn about CSS model!!</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
+        adipisci officiis voluptates ea porro blanditiis eius? Nam molestias
+        excepturi rem.
+      </p>
+    </div>
+  </body>
+</html>
