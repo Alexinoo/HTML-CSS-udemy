@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS linear-gradient()</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      width: 80vw;
+      max-width: 1170px;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 16px;
+    }
+
+    /* linear-gradient() */
+    section {
+      width: 150px;
+      height: 150px;
+      margin: 5px;
+    }
+
+    /* two colors - with directions */
+
+    .one {
+      background: linear-gradient(to top, blue, green);
+    }
+
+    /* more than 2 colors */
+
+    .two {
+      background: linear-gradient(to left, blue, green, red, yellow, #f15025);
+    }
+
+    /* with angles */
+
+    .three {
+      background: linear-gradient(300deg, red, green);
+    }
+
+    .four {
+      background: linear-gradient(to top right, red, green);
+    }
+
+    /* with percentages */
+
+    .five {
+      background: linear-gradient(blue 20%, yellow 70%);
+    }
+
+    /* with transparency - linear-gradient(direction ,rgba(),rgba()) */
+    .six {
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.9)
+      );
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS linear-gradient()</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            CSS gradients let you display smooth transitions between two or more
+            specified colors.
+          </li>
+          <li>
+            CSS defines three types of gradients: (linear / radial / conic)
+          </li>
+          <li>
+            To create a linear gradient you must define at least two color
+            stops. (Not limited to 2 colors)
+          </li>
+          <li>
+            Color stops are the colors you want to render smooth transitions
+            among
+          </li>
+          <li>
+            You can also set a starting point and a direction along with the
+            gradient effect.
+            <ul>
+              <li>
+                Direction - Top to Bottom (this is default) : linear-gradient(to
+                bottom, color-stop1, color-stop2,..);
+              </li>
+              <li>
+                Direction - Bottom to top : linear-gradient(to top, color-stop1,
+                color-stop2,..);
+              </li>
+              <li>
+                Direction - Left to Right : linear-gradient(to right,
+                color-stop1, color-stop2,..);
+              </li>
+            </ul>
+          </li>
+          <li>
+            We can also use angles/degrees to have more control instead of
+            predefined directions
+            <ul>
+              <li>
+                Equivalent "to top" : linear-gradient( 0deg, color-stop1,
+                color-stop2);
+              </li>
+              <li>
+                Equivalent "to right" : linear-gradient( 90deg, color-stop1,
+                color-stop2);
+              </li>
+            </ul>
+          </li>
+          <li>
+            We can also add transparency by using rgba() fxn to define color
+            stops
+          </li>
+          <li>
+            The last parameter in the rgba() function can be a value from 0 to
+            1, and it defines the transparency of the color:
+            <ul>
+              <li>0 indicates full transparency</li>
+              <li>1 indicates full color (no transparency).</li>
+            </ul>
+          </li>
+          <li>
+            The following example shows a linear gradient that starts from the
+            left. It starts fully transparent, transitioning to full color red:
+            <ul>
+              <li>
+                linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+              </li>
+            </ul>
+          </li>
+
+          <li>see examples below for different sized images</li>
+        </ul>
+      </div>
+    </div>
+    <section class="one"></section>
+    <section class="two"></section>
+    <section class="three"></section>
+    <section class="four"></section>
+    <section class="five"></section>
+    <section class="six"></section>
+  </body>
+</html>
