@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS Background SHORTHAND</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      width: 80vw;
+      max-width: 1170px;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 16px;
+    }
+
+    /* CSS Background SHORTHAND*/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    section {
+      min-height: 100vh;
+      color: #fff;
+      border: 2px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    /* big image */
+    .big-img {
+      background: linear-gradient(
+          to bottom right,
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url('./images/big.jpeg') center/cover no-repeat fixed;
+      /* background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; */
+    }
+    /* small image */
+    .small-img {
+      background: url('./images/folder-img.jpeg') center/cover no-repeat scroll;
+      /* background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-attachment: scroll; */
+    }
+    /* folder image */
+    .folder-img {
+      background: url('./images/big.jpeg') center/cover no-repeat fixed;
+      /* background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; */
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS Background SHORTHAND</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            The sequence is background : url() position/size repeat attachment
+            <ul>
+              <li>background : url() center/cover no-repeat fixed;</li>
+            </ul>
+          </li>
+          <li>
+            We can flip repeat & attachment properties as below :
+            <ul>
+              <li>background : url() center/cover fixed no-repeat;</li>
+            </ul>
+          </li>
+          <li>
+            However center/cover properties cannot be flipped to cover/center
+          </li>
+          <li>
+            In case you have linear-gradient , the syntax would be like the
+            following
+            <ul>
+              <li>
+                background : linear-gradient() , url() center/cover no-repeat
+                fixed;
+              </li>
+            </ul>
+          </li>
+          <li>
+            In case you don't have linear-gradient , add the values after url()
+            <ul>
+              <li>background : url() center/cover no-repeat fixed;</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <section class="big-img">
+      <h1>i'm big image</h1>
+    </section>
+    <section class="folder-img">
+      <h1>i'm folder image</h1>
+    </section>
+    <section class="small-img">
+      <h1>i'm small image</h1>
+    </section>
+  </body>
+</html>
