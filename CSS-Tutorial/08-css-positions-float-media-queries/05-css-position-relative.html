@@ -12,7 +12,7 @@
     }
 
     .container {
-      width: 80vw;
+      width: 60vw;
       max-width: 1170px;
       height: auto;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -58,35 +58,29 @@
     /* Position : relative */
 
     section {
-      width: 500px;
-      border: 1px solid red;
-      margin: auto;
-      text-align: center;
-    }
-
-    .child {
-      border-radius: 10%;
-      width: 100px;
-      height: 100px;
-      margin: 20px;
+      border: 3px solid red;
+      background: yellow;
+      margin-top: 40px;
     }
 
     .one {
-      background-color: powderblue;
+      background: #0000ff;
+      color: #fff;
       position: relative;
-      right: 50px;
+      /* top: 200px; */
+      bottom: 2rem;
+      /* left: 20%; */
+      right: 40px;
     }
 
     .two {
-      background-color: royalblue;
+      background: #00ff00;
+      color: #fff;
     }
-
-    .three {
-      background-color: sienna;
-    }
-
-    .four {
-      background-color: slateblue;
+    .special {
+      background: pink;
+      font-size: 20px;
+      color: #000;
     }
   </style>
 
@@ -107,46 +101,26 @@
           </li>
           <li>
             To modify the position, you'll need to apply the top, bottom, right,
-            and left properties and specify where and how much you want to move
-            the element.
-          </li>
-          <li>
-            The top, bottom, right, and left offsets push the tag away from
-            where it's specified/relative position, working in reverse.
-          </li>
-          <li>
-            top in fact moves the element towards the bottom of the element's
-            parent container.
-          </li>
-          <li>
-            bottom pushes the element towards the top of the element's parent
-            container, and so on.
-          </li>
-          <li>
-            you can move the first square to the left by updating the CSS like
-            this:
-            <ul>
-              <li>
-                the square has moved 50px from the left of where it was supposed
-                to be by default.
-              </li>
-            </ul>
-          </li>
-          <li>
-            To recap, elements that are relatively positioned can move around
-            while still remaining in the regular document flow.
-          </li>
-          <li>
-            They also do not affect the layout of the surrounding elements.
+            and left properties specify where and how much you want to move the
+            element.
           </li>
         </ul>
       </div>
     </div>
     <section>
-      <div class="child one">One</div>
-      <div class="child two">Two</div>
-      <div class="child three">Three</div>
-      <div class="child four">Four</div>
+      <p class="one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia minima
+        adipisci officiis saepe perspiciatis facilis eos distinctio.
+        Repellendus, quod deserunt aperiam at sunt, asperiores veniam
+        voluptatibus, ducimus optio explicabo veritatis.
+      </p>
+      <p class="two">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia minima
+        adipisci officiis saepe perspiciatis facilis eos distinctio.
+        Repellendus, quod deserunt aperiam at sunt, asperiores veniam
+        voluptatibus, ducimus optio explicabo veritatis.
+        <span class="special">hey i'm absolute</span>
+      </p>
     </section>
   </body>
 </html>
