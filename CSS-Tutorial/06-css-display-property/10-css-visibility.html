@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Tutorial - Opacity</title>
+    <title>CSS Tutorial - Visibility : visible/hidden</title>
   </head>
   <style>
     html {
@@ -62,48 +62,39 @@
       background: #f1f5f9;
     }
 
-    /* Opacity : 0 - 1 */
-    .opacity-1,
-    .opacity-5,
-    .opacity-0 {
+    /* Visibility : visible/hidden */
+    .visibility {
       background: #ff0000;
-    }
-
-    .opacity-1 {
-      opacity: 1;
-    }
-    .opacity-5 {
-      opacity: 0.5;
-    }
-    .opacity-0 {
-      opacity: 0;
+      visibility: hidden;
     }
   </style>
 
   <body>
     <div class="container">
       <div class="title">
-        <h1>Opacity : 0 - 1</h1>
+        <h1>Visibility : visible/hidden</h1>
         <div class="underline"></div>
       </div>
       <div class="intro">
         <ul>
-          <li>specifies the opacity/transparency of an element</li>
           <li>
-            take a value from 0.0 - 1.0
+            The visibility property specifies whether or not an element is
+            visible.
+          </li>
+          <li>
+            take the following possible common values
             <ul>
-              <li>0 - lowest(more transparent)</li>
-              <li>1 - highest</li>
+              <li>visibility: visible (default)</li>
+              <li>
+                visibility:hidden - hides the element , preserve the space
+              </li>
             </ul>
           </li>
-          <li>opacity:0 => hides the element , preserve the space</li>
         </ul>
       </div>
     </div>
     <div class="content">
-      <div class="opacity-1">opacity one</div>
-      <div class="opacity-5">opacity 0.5</div>
-      <div class="opacity-0">opacity 0</div>
+      <div class="visibility">visibility</div>
     </div>
   </body>
 </html>
