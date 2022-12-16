@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - Z-index</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      width: 60vw;
+      max-width: 1170px;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    span {
+      font-size: 18px;
+    }
+
+    /* Z-index */
+    img {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+    }
+    .banner {
+      position: relative;
+      margin: 20px;
+      width: 80vw;
+      height: 70vh;
+      border: 5px solid green;
+    }
+
+    .one {
+      top: 0;
+      left: 0;
+      z-index: -3;
+    }
+    .two {
+      top: 10%;
+      left: 10%;
+      z-index: 2;
+    }
+    .three {
+      top: 20%;
+      left: 20%;
+      z-index: 1;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Z-index</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>The z-index property specifies the stack order of an element.</li>
+          <li>
+            z-index only works on positioned elements (position: absolute,
+            position: relative, position: fixed, or position: sticky) and flex
+            items
+          </li>
+          <li>
+            If two positioned elements overlap without a z-index specified, the
+            element positioned last in the HTML code will be shown on top.
+          </li>
+          <li>All elements are set to z-index:0 by default</li>
+          <li>z-index does not work with position:static</li>
+        </ul>
+      </div>
+    </div>
+    <div class="banner">
+      <img
+        src="../../CSS-Tutorial/07-css-background-images/images/small.jpeg"
+        alt=""
+        class="one"
+      />
+      <img
+        src="../07-css-background-images/images/big.jpeg"
+        alt=""
+        class="two"
+      />
+      <img
+        src="../07-css-background-images/images/folder-img.jpeg"
+        alt=""
+        class="three"
+      />
+    </div>
+  </body>
+</html>
