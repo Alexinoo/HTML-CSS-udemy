@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - Float property - Column layout</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      width: 60vw;
+      max-width: 1170px;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    span {
+      font-size: 18px;
+    }
+
+    /* Float property - Column layout */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    section {
+      height: 200px;
+      width: 50%;
+      float: right;
+    }
+
+    .heading-one {
+      clear: both;
+      background: #f1f5;
+    }
+
+    .one {
+      background: red;
+    }
+    .two {
+      background: green;
+    }
+    .three {
+      background: blue;
+    }
+    .four {
+      background: yellow;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Float property - Column layout</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            If you have elements that are floating , ensure that the elmnts that
+            are following have clear property with the values that matches what
+            the previous elements were floated to
+          </li>
+          <li>In order to be on the safe side - you can use clear:both</li>
+        </ul>
+      </div>
+    </div>
+    <section class="one">
+      <p>Box 1</p>
+    </section>
+    <section class="two">
+      <p>Box 2</p>
+    </section>
+    <section class="three">
+      <p>Box 3</p>
+    </section>
+    <!-- <section class="four">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+        inventore.
+      </p>
+    </section> -->
+    <h1 class="heading-one">some other text</h1>
+  </body>
+</html>
