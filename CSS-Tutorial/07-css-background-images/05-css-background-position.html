@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS Background Position</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      width: 80vw;
+      max-width: 1170px;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 16px;
+    }
+
+    /* background-position : center/top/left/bottom/right  */
+    section {
+      height: 300px;
+      color: #fff;
+      border: 2px solid red;
+    }
+
+    /* big image */
+    .big-img {
+      background: url('./images/big.jpeg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    /* small image */
+    .small-img {
+      background: url('./images/small.jpeg');
+      background-repeat: no-repeat;
+      /* background-size: cover; */
+      background-position: center;
+      background-position: left;
+      background-position: right;
+      background-position: bottom;
+      background-position: top;
+      background-position: 0 0;
+      background-position: 20% 50%;
+      background-position: 100% 100%;
+    }
+    /* folder image */
+    .folder-img {
+      background: url('./images/folder-img.jpeg');
+      /* background-repeat: no-repeat; */
+      background-size: contain;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS background-position</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            The background-position property sets the starting position of a
+            background image.
+          </li>
+          <li>
+            By default, a background-image is placed at the top-left corner of
+            an element, and repeated both vertically and horizontally.
+          </li>
+          <li>
+            There are four different values you can use with this property
+            <ul>
+              <li>top - <span></span></li>
+              <li>
+                right -
+                <span>places the image on the right</span>
+              </li>
+              <li>
+                left -
+                <span>places the image on the left</span>
+              </li>
+              <li>
+                bottom -
+                <span></span>
+              </li>
+              <li>
+                center -
+                <span>places the image at the center</span>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            We can also write the values in percentages(%) in x% y% format
+            <ul>
+              <li>background-position: 0 0; - <span>default behavior</span></li>
+              <li>
+                background-position: 20% 50%; -
+                <span>moves the image 20% horizontally & 50% vertically</span>
+              </li>
+              <li>
+                background-position: 100% 100%; -
+                <span
+                  >moves the image 100% horizontally & 100% vertically -
+                  right-bottom</span
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>see examples below for different sized images</li>
+        </ul>
+      </div>
+    </div>
+    <section class="big-img">
+      <h1>i'm big image</h1>
+    </section>
+    <section class="small-img">
+      <h1>i'm small image</h1>
+    </section>
+    <section class="folder-img">
+      <h1>i'm folder image</h1>
+    </section>
+  </body>
+</html>
