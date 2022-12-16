@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - Media Query Declaration</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      width: 60vw;
+      max-width: 1170px;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 18px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Media Query Declaration</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            How to declare media queries
+            <ul>
+              <li>
+                start with the @media declaration -
+                <span
+                  >tells the browser that we have specified a media query</span
+                >
+              </li>
+              <li>
+                set the media type - specify the nature of the device we're
+                working with
+                <ul>
+                  <li>all - <span>all media type devices</span></li>
+                  <li>print - <span>printers</span></li>
+                  <li>
+                    screen -
+                    <span>computer screens , tablets , smart-phones </span>
+                  </li>
+                  <li>
+                    speech -
+                    <span>screen-raeders that reads tha page out loud</span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                We declare the media type after the @media declaration, like
+                this:
+                <ul>
+                  <li>@media all /screen /print /speech</li>
+                </ul>
+              </li>
+              <li>
+                We write the "and" operator if we have two conditions, like
+                this:
+                <ul>
+                  <li>@media screen and (max-width : 768px){}</li>
+                </ul>
+              </li>
+              <li>
+                We don't write the "and" operator if we have one condition
+                <ul>
+                  <li>@media screen {}</li>
+                </ul>
+              </li>
+              <li>
+                You can also skip the media type and work with just min-width &
+                max-width, like this:
+                <ul>
+                  <li>@media (min-width : 480px) and (max-width : 768px) {}</li>
+                </ul>
+              </li>
+              <li>
+                If you have three conditions or more, you can use a comma, like
+                this:
+                <ul>
+                  <li>
+                    @media screen, (min-width : 480px) and (max-width : 768px)
+                    {}
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
