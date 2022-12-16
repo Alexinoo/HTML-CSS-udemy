@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - Position : fixed</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      width: 60vw;
+      max-width: 1170px;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    span {
+      font-size: 18px;
+    }
+
+    /* Position : fixed */
+    .navbar {
+      background: red;
+      color: #fff;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    section {
+      border: 3px solid red;
+      background: yellow;
+      margin-top: 40px;
+    }
+
+    .one {
+      background: #0000ff;
+      color: #fff;
+    }
+
+    .two {
+      background: #00ff00;
+      color: #fff;
+    }
+    .special {
+      background: pink;
+      font-size: 20px;
+      color: #000;
+    }
+  </style>
+
+  <body>
+    <div class="navbar">navbar</div>
+    <div class="container">
+      <div class="title">
+        <h1>Position : fixed</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            An element with position: fixed; is positioned relative to the
+            viewport
+          </li>
+          <li>
+            This means it always stays in the same place even if the page is
+            scrolled. The top, right, bottom, and left properties are used to
+            position the element.
+          </li>
+          <li>
+            A fixed element does not leave a gap in the page where it would
+            normally have been located.
+          </li>
+          <li>browser will use other content to fill up the space</li>
+        </ul>
+      </div>
+    </div>
+    <section>
+      <p class="one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia minima
+        adipisci officiis saepe perspiciatis facilis eos distinctio.
+        Repellendus, quod deserunt aperiam at sunt, asperiores veniam
+        voluptatibus, ducimus optio explicabo veritatis.
+      </p>
+      <p class="two">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia minima
+        adipisci officiis saepe perspiciatis facilis eos distinctio.
+        Repellendus, quod deserunt aperiam at sunt, asperiores veniam
+        voluptatibus, ducimus optio explicabo veritatis.
+        <span class="special">hey i'm absolute</span>some text to replace the
+        absolute element
+      </p>
+    </section>
+  </body>
+</html>
