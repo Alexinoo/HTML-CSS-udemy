@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - Translate Hero Example</title>
+  </head>
+  <style>
+    /* Translate Hero Example */
+    * {
+      margin: 0;
+    }
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .hero-center {
+      /* border: 2px solid red; */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 20rem;
+    }
+  </style>
+
+  <body>
+    <div class="hero">
+      <div class="hero-center">
+        <h1>web dev</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          fugiat voluptates maxime perferendis quia voluptatem sunt consequuntur
+          id quas incidunt.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
