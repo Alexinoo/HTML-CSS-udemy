@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS Inset property</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      width: 80vw;
+      max-width: 1170px;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 18px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    /* CSS Inset property */
+    * {
+      margin: 0;
+    }
+
+    .box {
+      width: 300px;
+      height: 300px;
+      background: orange;
+      margin-bottom: 1rem;
+    }
+
+    .special {
+      position: relative;
+    }
+
+    .special h1 {
+      position: absolute;
+      /* top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; */
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      color: #fff;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS Inset property</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            The inset property sets the distance between an element and the
+            parent element.
+          </li>
+          <li>
+            The inset property is a shorthand property that corresponds to the
+            top,right,bottom,left properties
+          </li>
+          <li>
+            If the inset property has four values:
+            <ul>
+              <li>
+                inset: 15px 30px 60px 90px;
+                <ul>
+                  <li>top distance is 15px</li>
+                  <li>right distance is 30px</li>
+                  <li>bottom distance is 60px</li>
+                  <li>left distance is 90px</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            If the inset property has three values:
+            <ul>
+              <li>
+                inset: 15px 30px 60px;
+                <ul>
+                  <li>top distance is 15px</li>
+                  <li>left and right distance is 30px</li>
+                  <li>bottom distance is 60px</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            If the inset property has two values:
+            <ul>
+              <li>
+                inset: 15px 30px;
+                <ul>
+                  <li>top and bottom distance is 15px</li>
+                  <li>left and right distance is 30px</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            If the inset property has one value:
+            <ul>
+              <li>
+                inset: 10px;
+                <ul>
+                  <li>all four distances are 10px</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            See example below &dArr; - cover the entire div.special with
+            position absolute using inset property
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="box">regular box</div>
+    <div class="box special">
+      <h1>special</h1>
+    </div>
+  </body>
+</html>
