@@ -55,6 +55,8 @@
     /* CSS Pseudo-Element ::before */
     p::before {
       content: 'before element';
+      display: block;
+      background: #222;
       font-weight: 500;
       font-size: 2rem;
       color: #f15025;
@@ -78,6 +80,11 @@
             as the content
           </li>
           <li>content : '' property is required even if it is empty</li>
+          <li>
+            If the content is empty , you need to specify some kind of width &
+            height an a background-color to atleast show something
+          </li>
+          <li>The content is added dynamically via CSS</li>
           <li>use ::before (CSS3) but other uses :before (CSS2 , CSS1)</li>
         </ul>
       </div>
