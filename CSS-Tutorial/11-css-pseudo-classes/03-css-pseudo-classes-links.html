@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS Pseudo Classes links</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 18px;
+    }
+
+    /* CSS Pseudo Classes links */
+
+    /* all links */
+    a {
+      display: block;
+      background: #777;
+      margin: 10px;
+    }
+
+    /* unvisited link */
+    a:link {
+      color: #fff;
+    }
+
+    /* visited link */
+    a:visited {
+      color: green;
+    }
+
+    /* mouse over link */
+
+    /* selected/active link */
+    a:active {
+      color: blue;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS Pseudo Classes Links</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            Links can be displayed in different ways:
+            <ul>
+              <li>:link - selects unvisited links with href attribute</li>
+              <li>visited links (:visited)</li>
+              <li>mouse over link (:hover)</li>
+              <li>selected link - (:active) as user's click</li>
+              <li>a - selects all links</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <h2>Styling a link depending on state</h2>
+
+    <a href="#">general link</a>
+    <a href="https://www.twitter.com/">visited link</a>
+    <a href="#">hover link</a>
+    <a href="#">active link</a>
+    <a>simple link</a>
+  </body>
+</html>
