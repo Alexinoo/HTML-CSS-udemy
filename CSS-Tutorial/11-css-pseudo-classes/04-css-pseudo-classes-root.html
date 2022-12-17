@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS Pseudo Classes :root</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 18px;
+    }
+
+    /* CSS Pseudo Classes :root */
+
+    :root {
+      font-size: 10px;
+    }
+    .absolute {
+      font-size: 24px;
+    }
+    .relative {
+      font-size: 1.5rem;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS Pseudo Classes :root</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            The :root selector selects root's element of the document (HTML).
+          </li>
+          <li>Has a higher specificity</li>
+          <li>
+            used for general styles e.g font size if we want to scale our whole
+            document
+          </li>
+          <li>stores css variables definitions</li>
+        </ul>
+      </div>
+    </div>
+    <h1 class="absolute">i'm absolute</h1>
+    <h1 class="relative">i'm relative</h1>
+    <p class="absolute">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
+      pariatur esse rerum quibusdam veniam, assumenda minima iure? Enim,
+      voluptates numquam? (absolute)
+    </p>
+    <p class="relative">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
+      pariatur esse rerum quibusdam veniam, assumenda minima iure? Enim,
+      voluptates numquam? (relative)
+    </p>
+  </body>
+</html>
