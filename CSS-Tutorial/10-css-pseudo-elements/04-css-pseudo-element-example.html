@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS Pseudo-Element ::after & ::before Use case</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 18px;
+    }
+
+    /* CSS Pseudo-Element use case */
+
+    .content {
+      width: 70vw;
+      margin: 100px auto;
+      /* border: 2px solid red; */
+      position: relative;
+    }
+    img {
+      width: 100%;
+      /* fix annoying space at the bottom - display: block */
+      display: block;
+    }
+
+    /* does not work with image::after , image::before
+    img::before {
+      content: 'hello there';
+    }
+
+    */
+
+    .content::before {
+      content: '';
+      border: 3px solid #555;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      box-sizing: border-box; /* IMPORTANT!!*/
+      top: -40px;
+      left: -40px;
+      z-index: -2;
+      transition: all 0.3s linear;
+    }
+    .content::after {
+      content: '';
+      background: rgba(128, 128, 128, 0.5);
+      /* background: grey; */
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      box-sizing: border-box; /* IMPORTANT!!*/
+      top: -20px;
+      left: -20px;
+      z-index: -1;
+      transition: all 0.3s linear;
+    }
+
+    /* hovering */
+    .content:hover::after,
+    .content:hover::before {
+      top: 0;
+      left: 0;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS Pseudo-Element ::after & ::before Use case</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro"></div>
+    </div>
+    <div class="content">
+      <img src="../07-css-background-images/images/big.jpeg" alt="" />
+    </div>
+  </body>
+</html>
