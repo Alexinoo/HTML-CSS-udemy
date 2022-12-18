@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS Animations Intro</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 18px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 16px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS animations intro</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            The key difference between animations and transitions is that
+            animation gives us more options
+          </li>
+          <li>
+            Transitions gives us 2 states :
+            <ul>
+              <li>0 - 100% (start state & end state)</li>
+            </ul>
+          </li>
+          <li>
+            Animations gives us more states :
+            <ul>
+              <li>0 - 1% , 2% ,..100% multiple states</li>
+            </ul>
+          </li>
+          <li>
+            An animation lets an element gradually change from one style to
+            another.
+          </li>
+          <li>
+            You can change as many CSS properties you want, as many times as you
+            want.
+          </li>
+          <li>
+            To use CSS animation, you must first specify some keyframes for the
+            animation.
+          </li>
+          <li>
+            Keyframes hold what styles the element will have at certain times.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
