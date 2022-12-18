@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transition-timing-functions</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 18px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 16px;
+    }
+
+    /* Transition-timing-functions */
+    section {
+      height: 100px;
+      width: 150px;
+      background: cornflowerblue;
+      font-size: 24px;
+      color: #fff;
+      margin: 5px;
+      text-align: center;
+      border-radius: 3px;
+      transition: all 2s;
+    }
+
+    section:hover {
+      transform: translateX(100px);
+    }
+
+    .ease {
+      transition-timing-function: ease;
+    }
+    .linear {
+      transition-timing-function: linear;
+    }
+    .ease-in {
+      transition-timing-function: ease-in;
+    }
+    .ease-out {
+      transition-timing-function: ease-out;
+    }
+    .ease-in-out {
+      transition-timing-function: ease-in-out;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS transition-timing-functions</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            The transition-timing-function property specifies the speed curve of
+            the transition effect.
+          </li>
+          <li>
+            The transition-timing-function property can have the following
+            values:
+            <ul>
+              <li>
+                ease -
+                <span
+                  >specifies a transition effect with a slow start, then fast,
+                  then end slowly (this is default)</span
+                >
+              </li>
+              <li>
+                linear -
+                <span
+                  >specifies a transition effect with the same speed from start
+                  to end</span
+                >
+              </li>
+              <li>
+                ease-in -
+                <span>specifies a transition effect with a slow start</span>
+              </li>
+              <li>
+                ease-out -
+                <span>specifies a transition effect with a slow end</span>
+              </li>
+              <li>
+                ease-in-out -
+                <span
+                  >specifies a transition effect with a slow start and end</span
+                >
+              </li>
+              <li>
+                cubic-bezier(n,n,n,n) -
+                <span
+                  >lets you define your own values in a cubic-bezier
+                  function</span
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <section class="default">default</section>
+    <section class="ease">ease</section>
+    <section class="linear">linear</section>
+    <section class="ease-in">ease-in</section>
+    <section class="ease-out">ease-out</section>
+    <section class="ease-in-out">ease-in-out</section>
+  </body>
+</html>
