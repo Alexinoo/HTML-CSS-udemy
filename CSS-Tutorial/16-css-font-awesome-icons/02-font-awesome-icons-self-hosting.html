@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Awesome Icons - Self Hosting</title>
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.css" />
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 18px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 16px;
+    }
+    a {
+      color: #fff;
+      font-size: 20px;
+    }
+
+    /* Styling font awesome icons */
+    /* .fa-solid {
+      font-size: 2rem;
+      color: #f15025;
+    } */
+    .fa-house {
+      font-size: 2rem;
+      color: #f15025;
+    }
+    .special {
+      font-size: 4rem;
+      color: #0000ff;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Font Awesome Icons - Self Hosting - Steps</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            visit
+            <a href="https://www.fontawesome.com" target="_blank"
+              >Font Awesome Icons</a
+            >
+          </li>
+          <li>Navigate to Docs</li>
+          <li>Navigate to Web</li>
+          <li>
+            Navigate to Host Yourself :
+            <ul>
+              <li>click : Host Yourself Web Fonts</li>
+              <li>
+                Navigate and click to download
+                <a href="https://fontawesome.com/download" target="_blank"
+                  >Download the Font Awesome v6 files</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            Reference Font Awesome in Your Project:
+            <ul>
+              <li>
+                Link the core fontawesome.css file along with the CSS files for
+                whichever styles you want to use into the &lt;head&gt; of each
+                template or page that you plan to add icons to.
+              </li>
+            </ul>
+          </li>
+          <li>Note : Place them before styles.css (preferably)</li>
+          <li>
+            Styling Font awesome icons :
+            <ul>
+              <li>Target their classes and style them in the styles.css</li>
+              <li>
+                Add our own classes to already existing i.class and add our own
+                styles
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <i class="fa-solid fa-house"></i>
+    <i class="fa-solid fa-mug-hot special"></i>
+  </body>
+</html>
