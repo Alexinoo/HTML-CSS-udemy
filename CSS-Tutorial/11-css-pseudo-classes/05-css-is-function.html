@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS is() function</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 20px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 18px;
+    }
+
+    /* is() function */
+
+    /* nav h2:hover,
+    header h2:hover,
+    section h2:hover {
+      color: red;
+    } */
+
+    :is(nav, header, section) h2:hover {
+      color: red;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS is() function</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            The :is() CSS pseudo-class function takes a selector list as its
+            argument, and selects any element that can be selected by one of the
+            selectors in that list.
+          </li>
+          <li>
+            This is useful for writing large selectors in a more compact form.
+          </li>
+          <li>Allows us to write short code</li>
+        </ul>
+      </div>
+    </div>
+    <nav>
+      <h2>heading</h2>
+    </nav>
+    <header>
+      <h2>heading</h2>
+    </header>
+    <section>
+      <h2>heading</h2>
+    </section>
+    <h2>regular heading</h2>
+  </body>
+</html>
