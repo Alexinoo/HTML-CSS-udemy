@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations : The @keyframes Rule</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 80rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 17px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 15px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS animations : @keyframes rules</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            When you specify CSS styles inside the @keyframes rule, the
+            animation will gradually change from the current style to the new
+            style at certain times.
+          </li>
+          <li>
+            we also specify when the style will change by using the keywords
+            "from" and "to" keywords(which represents 0% (start) and 100%
+            (complete)).
+          </li>
+          <li>
+            It is also possible to use percent. By using percent, you can add as
+            many style changes as you like.
+            <ul>
+              <li>0% , 25% , 50% , 75%,..100%</li>
+            </ul>
+          </li>
+          <li>
+            To get an animation to work, you must bind the animation to an
+            element.
+          </li>
+          <li>
+            We have the following animation properties :
+            <ul>
+              <li>@keyframes</li>
+              <li>
+                animation-name -
+                <span>name of the animation specified by @keyframes</span>
+              </li>
+              <li>
+                animation-duration -
+                <span>
+                  how long an animation should take to complete , If not
+                  specified , no animation will occur - default is 0s</span
+                >
+              </li>
+              <li>
+                animation-delay -
+                <span> specifies a delay for the start of an animation.</span>
+              </li>
+              <li>
+                animation-iteration-count -
+                <span
+                  >specifies the number of times an animation should run.</span
+                >
+              </li>
+              <li>
+                animation-direction -
+                <span
+                  >specifies whether an animation should be played forwards,
+                  backwards or in alternate cycles</span
+                >
+                <ul>
+                  <li>
+                    The animation-direction property can have the following
+                    values:
+                    <ul>
+                      <li>
+                        normal -
+                        <span
+                          >The animation is played as normal (forwards). This is
+                          default</span
+                        >
+                      </li>
+                      <li>
+                        reverse -
+                        <span
+                          >The animation is played in reverse direction
+                          (backwards)</span
+                        >
+                      </li>
+                      <li>
+                        alternate -
+                        <span
+                          >The animation is played forwards first, then
+                          backwards</span
+                        >
+                      </li>
+                      <li>
+                        alternate-reverse -
+                        <span
+                          >The animation is played backwards first, then
+                          forwards</span
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul></ul>
+              </li>
+              <li>
+                animation-timing-function -
+                <span>specifies the speed curve of the animation.</span>
+                <ul>
+                  <li>
+                    The animation-timing-function property can have the
+                    following values:
+                    <ul>
+                      <li>
+                        ease -
+                        <span
+                          >Specifies an animation with a slow start, then fast,
+                          then end slowly (this is default)</span
+                        >
+                      </li>
+                      <li>
+                        linear -
+                        <span
+                          >Specifies an animation with the same speed from start
+                          to end</span
+                        >
+                      </li>
+                      <li>
+                        ease-in -
+                        <span>Specifies an animation with a slow start</span>
+                      </li>
+                      <li>
+                        ease-out -
+                        <span>Specifies an animation with a slow end</span>
+                      </li>
+                      <li>
+                        ease-in-out -
+                        <span
+                          >Specifies an animation with a slow start and
+                          end</span
+                        >
+                      </li>
+                      <li>
+                        cubic-bezier(n,n,n,n) -
+                        <span
+                          >Lets you define your own values in a cubic-bezier
+                          function</span
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                animation-fill-mode -
+                <span
+                  >specifies a style for the target element when the animation
+                  is not playing (before it starts, after it ends, or
+                  both)</span
+                >
+                <ul>
+                  <li>
+                    The animation-fill-mode property can have the following
+                    values:
+                    <ul>
+                      <li>
+                        none -
+                        <span
+                          >Default value. Animation will not apply any styles to
+                          the element before or after it is executing</span
+                        >
+                      </li>
+                      <li>
+                        forwards -
+                        <span
+                          >The element will retain the style values that is set
+                          by the last keyframe (depends on animation-direction
+                          and animation-iteration-count)</span
+                        >
+                      </li>
+                      <li>
+                        backwards -
+                        <span
+                          >The element will get the style values that is set by
+                          the first keyframe (depends on animation-direction),
+                          and retain this during the animation-delay
+                          period</span
+                        >
+                      </li>
+                      <li>
+                        both -
+                        <span
+                          >The animation will follow the rules for both forwards
+                          and backwards, extending the animation properties in
+                          both directions</span
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>animation - SHORTHAND</li>
+            </ul>
+          </li>
+          <li>
+            When an animation is finished, it goes back to its original style.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
