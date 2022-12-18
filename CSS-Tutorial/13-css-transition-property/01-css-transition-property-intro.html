@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS Transition Property Intro</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 18px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 16px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS Transition Property</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            CSS Transition Property allows you to change property values
+            smoothly, over a given duration.
+          </li>
+          <li>
+            To create a transition effect, you must specify two things:
+            <ul>
+              <li>the CSS property you want to add an effect to</li>
+              <li>the duration of the effect</li>
+            </ul>
+          </li>
+          <li>
+            Note: If the duration part is not specified, the transition will
+            have no effect, because the default value is 0.
+          </li>
+          <li>
+            CSS Transition Property has the following properties :
+            <ul>
+              <li>transition (SHORTHAND)</li>
+              <li>
+                transition-delay -
+                <span
+                  >specifies a delay (in seconds) for the transition
+                  effect</span
+                >
+              </li>
+              <li>
+                transition-property -
+                <span>CSS property you want to add transition effect to</span>
+              </li>
+              <li>transition-duration - <span>duration of the effect</span></li>
+              <li>
+                transition-timing-function -
+                <span>
+                  specifies the speed curve of the transition effect.</span
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
