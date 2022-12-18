@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Semantic Elements</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 18px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 16px;
+    }
+    a {
+      font-size: 20px;
+      color: #fff;
+    }
+    .navbar {
+      background: red;
+      font-size: 2rem;
+    }
+
+    nav {
+      background: blue;
+      font-size: 2rem;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>HTML Semantic Elements</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>Semantic elements = elements with a meaning.</li>
+          <li>
+            A semantic element clearly describes its meaning to both the browser
+            and the developer.
+          </li>
+          <li>
+            Examples of non-semantic elements: &lt;div&gt; and &lt;span&gt; -
+            Tells nothing about its content.
+          </li>
+          <li>
+            Examples of semantic elements: &lt;form&gt;, &lt;table&gt;, and
+            &lt;article&gt; - Clearly defines its content.
+          </li>
+          <li>
+            Some of the semantic Elements in HTML include
+            <ul>
+              <li>
+                &lt;article&gt;
+                <span>specifies independent, self-contained content.</span>
+              </li>
+              <li>
+                &lt;aside&gt;
+                <span
+                  >defines some content aside from the content it is placed in
+                  (like a sidebar).</span
+                >
+              </li>
+              <li>
+                &lt;footer&gt;
+                <span
+                  >defines a footer for a document or section and may
+                  contain</span
+                >
+                <ul>
+                  <li>authorship information</li>
+                  <li>copyright information</li>
+                  <li>contact information</li>
+                  <li>sitemap</li>
+                  <li>back to top links</li>
+                  <li>related documents</li>
+                </ul>
+              </li>
+              <li>
+                &lt;header&gt;
+                <span
+                  >container for introductory content or a set of navigational
+                  links.</span
+                >
+              </li>
+              <li>
+                &lt;main&gt;
+                <span>Specifies the main content of a document</span>
+              </li>
+              <li>
+                &lt;nav&gt; <span>defines a set of navigation links.</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- old style  -->
+    <div class="navbar">
+      <ul>
+        <li>
+          <a href="#">about</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- semantic html -->
+    <nav class="nav">
+      <ul>
+        <li>
+          <a href="#">about</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
