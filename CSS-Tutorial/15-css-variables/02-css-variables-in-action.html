@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables In Action</title>
+  </head>
+  <style>
+    /* global scope  */
+    :root {
+      --primaryColor: #256cf1;
+      --cl-secondary: purple;
+      --mainTransition: all 0.3s linear;
+      --mainSpacing: 5px;
+    }
+
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h4 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 18px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    .content {
+      max-width: 45rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      border-radius: 12px;
+    }
+
+    /* Variables in action */
+    h1 {
+      color: var(--primaryColor);
+    }
+    h2 {
+      color: var(--primaryColor);
+    }
+    h3 {
+      color: var(--primaryColor);
+      transition: var(--mainTransition);
+    }
+
+    h3:hover {
+      color: var(--cl-secondary);
+    }
+
+    p {
+      letter-spacing: var(--mainSpacing);
+      transition: var(--mainTransition);
+    }
+
+    p:hover {
+      color: var(--cl-secondary);
+    }
+
+    /* local scope */
+
+    .main {
+      --primaryRed: red;
+    }
+
+    .main-text {
+      color: var(--primaryRed);
+    }
+
+    /* try to use --primaryRed local-variable outside div.main  - Last Rule*/
+
+    h3 {
+      color: var(--primaryRed);
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h4>CSS Variables In Action</h4>
+        <div class="underline"></div>
+      </div>
+      <div class="intro"></div>
+    </div>
+    <div class="content">
+      <h1>hello world</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus,
+        culpa?
+      </p>
+      <h2>hello world</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus,
+        culpa?
+      </p>
+      <h3>hello world</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus,
+        culpa?
+      </p>
+      <div class="main">
+        <p class="main-text">main text</p>
+      </div>
+    </div>
+  </body>
+</html>
