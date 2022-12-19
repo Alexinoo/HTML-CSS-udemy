@@ -30,6 +30,20 @@ body {
   color: var(--grey-dark);
 }
 
+/* General styles to all images */
+/* img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+} */
+
+/* Specific styles to images with a class of .img*/
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .blogs {
   padding: 5rem 0;
 }
@@ -64,16 +78,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* General styles to all images */
-/* img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-} */
-
-/* Specific styles to images with a class of .img*/
-.img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
+.blog-content {
+  padding-bottom: 1rem;
 }
