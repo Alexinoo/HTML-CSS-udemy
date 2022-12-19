@@ -34,6 +34,13 @@ body {
   padding: 5rem 0;
 }
 
+.section-title {
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  margin-bottom: 2rem;
+}
+
 img {
   width: 100%;
 }
