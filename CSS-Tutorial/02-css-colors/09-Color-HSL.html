@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial - CSS HSL Colors</title>
+  </head>
+  <style>
+    .container {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      max-width: 60rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 16px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    .content {
+      max-width: 40rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    span {
+      font-size: 16px;
+    }
+
+    /*CSS HSL Colors */
+    * {
+      margin: 0;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 1rem;
+      border: 1px solid #f15025;
+    }
+
+    .box-1 {
+      background: hsl(0, 100%, 50%);
+    }
+    .box-2 {
+      background: hsl(120, 100%, 50%);
+    }
+    .box-3 {
+      background: hsl(120, 40%, 50%);
+    }
+    .box-4 {
+      background: hsl(120, 100%, 0%);
+    }
+    .box-5 {
+      background: hsl(120, 100%, 100%);
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS HSL Colors</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>HSL stands for hue, saturation, and lightness.</li>
+          <li>
+            In CSS, a color can be specified using hue, saturation, and
+            lightness (HSL) in the form:
+          </li>
+          <li>
+            Hue Value
+            <ul>
+              <li>
+                Hue is a degree on the color wheel from 0 to 360.
+                <ul>
+                  <li>0 is red</li>
+                  <li>60 is yellow</li>
+                  <li>120 is green</li>
+                  <li>180 is cyan</li>
+                  <li>240 is blue</li>
+                  <li>300 is magenta</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Saturation Value
+            <ul>
+              <li>
+                Saturation is a percentage value. 0% means a shade of gray, and
+                100% is the full color.
+              </li>
+              <li>100% is pure color, no shades of gray.</li>
+              <li>50% is 50% gray, but you can still see the color.</li>
+              <li>0% is completely gray; you can no longer see the color.</li>
+            </ul>
+          </li>
+          <li>
+            Lightness Value
+            <ul>
+              <li>
+                Lightness is also a percentage. 0% is black, 50% is neither
+                light or dark, 100% is white
+              </li>
+              <li>
+                The lightness of a color can be described as how much light you
+                want to give the color,
+              </li>
+              <li>
+                where 0% means no light (black), 50% means 50% light (neither
+                dark nor light) and 100% means full lightness (white).
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <div class="box box-1"></div>
+      <div class="box box-2"></div>
+      <div class="box box-3"></div>
+      <div class="box box-4"></div>
+      <div class="box box-5"></div>
+    </div>
+  </body>
+</html>
