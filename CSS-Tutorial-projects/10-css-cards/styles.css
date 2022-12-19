@@ -60,13 +60,20 @@ body {
 }
 
 .blog-img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
   border-radius: var(--border-radius);
   margin-bottom: 0.5rem;
 }
 
-img {
-  /* width: 100%; */
+/* General styles to all images */
+/* img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+} */
+
+/* Specific styles to images with a class of .img*/
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }
