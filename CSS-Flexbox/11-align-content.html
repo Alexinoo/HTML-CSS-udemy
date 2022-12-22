@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS FlexBox - align-content</title>
+  </head>
+  <style>
+    html {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    body {
+      background: #f3f3f3;
+    }
+
+    .container {
+      max-width: 80rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 1rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 18px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 16px;
+    }
+    a {
+      font-size: 20px;
+      color: #fff;
+    }
+
+    /* CSS Flexbox :align-content */
+
+    .flex-container {
+      max-width: 40rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 1rem auto;
+      padding: 0.5rem;
+      color: white;
+      border-radius: 12px;
+
+      /* align-content: */
+      display: flex;
+      height: 40vh;
+      flex-wrap: wrap;
+      align-content: stretch;
+      align-content: flex-end;
+      align-content: flex-start;
+      align-content: center;
+      align-content: space-around;
+      align-content: space-between;
+    }
+
+    .box {
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: #f3f3f3;
+    }
+
+    .box-1 {
+      background: #581f18;
+    }
+    .box-2 {
+      background: #f0a202;
+    }
+    .box-3 {
+      background: #d95d39;
+    }
+    .box-4 {
+      background: #202c59;
+    }
+    .box-5 {
+      background: #51cb20;
+    }
+    .generic {
+      background: #202c59;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS FlexBox - align-content</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>align-content (aligns flex-lines)</li>
+          <li>
+            align-content : stretch (Lines stretch to take up the remaining
+            space - default)
+          </li>
+          <li>
+            align-content : flex-start ( Lines are packed toward the start of
+            the flex container )
+          </li>
+          <li>
+            align-content : flex-end ( Lines are packed toward the end of the
+            flex container )
+          </li>
+          <li>
+            align-content : center ( Lines are packed toward the center of the
+            flex container )
+          </li>
+          <li>
+            align-content : space-between ( Lines are evenly distributed in the
+            flex container )
+          </li>
+          <li>
+            align-content : space-around ( Lines are evenly distributed in the
+            flex container )
+          </li>
+          <li>
+            align-content : space-evenly ( Lines are evenly distributed in the
+            flex container, with equal space around them )
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- parent = flex-container -->
+    <div class="flex-container">
+      <!-- children - flex-items -->
+      <div class="box box-1">1</div>
+      <div class="box box-2">2</div>
+      <div class="box box-3">3</div>
+      <div class="box box-4">4</div>
+      <div class="box box-5">5</div>
+      <div class="box generic">G</div>
+      <div class="box generic">G</div>
+      <div class="box generic">G</div>
+      <div class="box generic">G</div>
+      <div class="box generic">G</div>
+    </div>
+  </body>
+</html>
