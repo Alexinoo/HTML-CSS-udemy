@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox Container</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 80rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 1rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 18px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 16px;
+    }
+    a {
+      font-size: 20px;
+      color: #fff;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS Flexbox Container</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            The flex container becomes flexible by setting the display property
+            to flex:
+          </li>
+          <li>
+            The flex container properties are:
+            <ul>
+              <li>
+                flex-direction :
+                <span
+                  >defines in which direction the container wants to stack the
+                  flex items</span
+                >
+                <ul>
+                  <li>
+                    column -
+                    <span
+                      >stacks the flex items vertically (from top to
+                      bottom):</span
+                    >
+                  </li>
+                  <li>
+                    column-reverse -
+                    <span
+                      >stacks the flex items vertically (but from bottom to
+                      top):</span
+                    >
+                  </li>
+                  <li>
+                    row -
+                    <span
+                      >stacks the flex items horizontally (from left to
+                      right):</span
+                    >
+                  </li>
+                  <li>
+                    row-reverse - stacks the flex items horizontally (but from
+                    right to left):<span></span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                flex-wrap:
+                <span
+                  >specifies whether the flex items should wrap or not.</span
+                >
+                <ul>
+                  <li>
+                    wrap -
+                    <span
+                      >specifies that the flex items will wrap if
+                      necessary</span
+                    >
+                  </li>
+                  <li>
+                    nowrap -
+                    <span
+                      >specifies that the flex items will not wrap (this is
+                      default)</span
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                flex-flow :
+                <span
+                  >is a shorthand property for setting both the flex-direction
+                  and flex-wrap properties.</span
+                >
+                <ul>
+                  <li>e.g. flex-flow: row wrap;</li>
+                </ul>
+              </li>
+              <li>
+                justify-content :
+                <span>is used to align the flex items (Horizontally)</span>
+                <ul>
+                  <li>
+                    center -
+                    <span
+                      >aligns the flex items at the center of the
+                      container</span
+                    >
+                  </li>
+                  <li>
+                    flex-start -
+                    <span
+                      >aligns the flex items at the beginning of the container
+                      (this is default)</span
+                    >
+                  </li>
+                  <li>
+                    flex-end -
+                    <span
+                      >aligns the flex items at the end of the container</span
+                    >
+                  </li>
+                  <li>
+                    space-around -
+                    <span
+                      >displays the flex items with space before, between, and
+                      after the lines</span
+                    >
+                  </li>
+                  <li>
+                    space-between -
+                    <span
+                      >displays the flex items with space between the
+                      lines</span
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                align-items :
+                <span> is used to align the flex items. (Vertically)</span>
+                <ul>
+                  <li>
+                    center -
+                    <span
+                      >aligns the flex items in the middle of the
+                      container</span
+                    >
+                  </li>
+                  <li>
+                    flex-start -
+                    <span
+                      >aligns the flex items at the top of the container</span
+                    >
+                  </li>
+                  <li>
+                    flex-end
+                    <span
+                      >aligns the flex items at the bottom of the
+                      container</span
+                    >
+                  </li>
+                  <li>
+                    stretch -
+                    <span
+                      >stretches the flex items to fill the container (this is
+                      default)</span
+                    >
+                  </li>
+                  <li>
+                    baseline -
+                    <span
+                      >aligns the flex items such as their baselines
+                      aligns</span
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                align-content : <span>is used to align the flex lines.</span>
+                <ul>
+                  <li>
+                    space-between -
+                    <span
+                      >displays the flex lines with equal space between
+                      them</span
+                    >
+                  </li>
+                  <li>
+                    space-around -
+                    <span
+                      >displays the flex lines with space before, between, and
+                      after them</span
+                    >
+                  </li>
+                  <li>
+                    stretch -
+                    <span
+                      >stretches the flex lines to take up the remaining space
+                      (this is default)</span
+                    >
+                  </li>
+                  <li>
+                    center -
+                    <span>
+                      displays display the flex lines in the middle of the
+                      container</span
+                    >
+                  </li>
+                  <li>
+                    flex-start -
+                    <span
+                      >value displays the flex lines at the start of the
+                      container</span
+                    >
+                  </li>
+                  <li>
+                    flex-end -
+                    <span
+                      >displays the flex lines at the end of the container</span
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
