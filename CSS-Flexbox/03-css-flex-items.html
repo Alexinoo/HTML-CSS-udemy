@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flex Items</title>
+  </head>
+  <style>
+    html {
+      font-family: 'Jost', sans-serif;
+    }
+
+    .container {
+      max-width: 80rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 1rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-transform: capitalize;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 18px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 16px;
+    }
+    a {
+      font-size: 20px;
+      color: #fff;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS Flex Items</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            The direct child elements of a flex container automatically becomes
+            flexible (flex) items.
+          </li>
+          <li>
+            The flex item properties are:
+            <ul>
+              <li>
+                order : - <span>specifies the order of the flex items</span>
+                <ul>
+                  <li>
+                    The first flex item in the code does not have to appear as
+                    the first item in the layout.
+                  </li>
+                  <li>The order value must be a number, default value is 0.</li>
+                </ul>
+              </li>
+              <li>
+                flex-grow :
+                <span
+                  >specifies how much a flex item will grow relative to the rest
+                  of the flex items</span
+                >
+                <ul>
+                  <li>The value must be a number, default value is 0.</li>
+                </ul>
+              </li>
+              <li>
+                flex-shrink :
+                <span
+                  >specifies how much a flex item will shrink relative to the
+                  rest of the flex items</span
+                >
+                <ul>
+                  <li>The value must be a number, default value is 1.</li>
+                </ul>
+              </li>
+              <li>
+                flex-basis :
+                <span>specifies the initial length of a flex item.</span>
+              </li>
+              <li>
+                flex :
+                <span
+                  >shorthand property for the flex-grow, flex-shrink, and
+                  flex-basis properties.</span
+                >
+              </li>
+              <li>
+                align-self :
+                <span
+                  >specifies the alignment for the selected item inside the
+                  flexible container</span
+                >
+                <ul>
+                  <li>
+                    overrides the default alignment set by the container's
+                    align-items property
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
