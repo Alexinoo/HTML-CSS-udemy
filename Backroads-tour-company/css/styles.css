@@ -272,6 +272,27 @@ About
   }
 }
 
+@media screen and (min-width: 1170px) {
+  .about-img {
+    position: relative;
+  }
+  .about-img::before {
+    content: '';
+    position: absolute;
+    border: 0.5rem solid var(--clr-primary-5);
+    width: 100%;
+    height: 100%;
+    /*Important since ::before and ::after do not inherit *{box-sizing: border-box} global style 
+    -Either add *,::before ,::after on the global style
+    -But since we are only using it HERE!! we can as well add it explicitly  */
+    box-sizing: border-box;
+    top: -1.5rem;
+    left: -1.5rem;
+    /* place image before the border use z-index */
+    z-index: -2;
+  }
+}
+
 /*
 =============== 
 Services
