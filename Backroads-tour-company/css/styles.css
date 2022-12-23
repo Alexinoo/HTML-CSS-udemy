@@ -246,6 +246,32 @@ About
 /* title add to globals */
 /* section center add to globals */
 
+.about-img,
+.about-info {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .about-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  /* create some of kind of a distance in btwn the .about-img & .about-info though the margin is applied to the right (flex: 0 0 calc(50% - 2rem);
+  -use justify-content:space-between on parent-container(.about-center) so that the margin is applied in the middle
+  - use flex-wrap in case content does not fit
+  - remove mbottom on bigger screen since it's not needed
+  -use align-self to align both .about-img & .about-info in the centre OR use align-items:center in the parent-container
+  */
+  .about-img,
+  .about-info {
+    flex: 0 0 calc(50% - 2rem);
+    margin-bottom: 0;
+    /* align-self: center; */
+  }
+}
+
 /*
 =============== 
 Services
