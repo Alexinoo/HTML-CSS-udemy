@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid - fr vs % units</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: #222;
+    }
+
+    .container {
+      max-width: 75rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
+    .title h1 span {
+      text-transform: lowercase;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 17px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 16px;
+    }
+    a {
+      font-size: 20px;
+      color: #fff;
+    }
+
+    /* CSS Grid : fr vs % */
+
+    .grid-container {
+      width: 75rem;
+      min-height: 100vh;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      grid-gap: 50px 100px;
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26);
+    }
+
+    .cell {
+      padding: 2rem;
+      background: #dedede;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: center;
+      border: 3px solid red;
+      color: #fff;
+    }
+
+    .cell-1 {
+      background: #581f18;
+    }
+    .cell-2 {
+      background: #f0a202;
+    }
+    .cell-3 {
+      background: #d95d39;
+    }
+    .cell-4 {
+      background: #202c59;
+    }
+    .cell-5 {
+      background: #51cb20;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>CSS Grid : <span>fr vs %</span>units</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            fr - Takes into consideration the gap if it's sepcified (CSS does
+            the heavy lifting if the grid-template-rows/columns are specified in
+            fr units)
+          </li>
+          <li>
+            % - Does not take into account of the grid-gap even if it's
+            specified (results to content overflow since the value of the gap is
+            not added/taken into acc behind the scenes)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- color values -->
+    <section class="grid-container">
+      <div class="cell cell-1">cell 1</div>
+      <div class="cell cell-2">cell 2</div>
+      <div class="cell cell-3">cell 3</div>
+      <div class="cell cell-4">cell 4</div>
+      <div class="cell cell-5">cell 5</div>
+      <div class="cell">cell 6</div>
+      <div class="cell">cell 7</div>
+    </section>
+  </body>
+</html>
