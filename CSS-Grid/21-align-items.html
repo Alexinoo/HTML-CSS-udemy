@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid - align-items: property</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: #222;
+    }
+
+    .container {
+      max-width: 75rem;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      margin: 3rem auto;
+      padding: 0.5rem;
+      background-color: #880017;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
+    .title h1 span {
+      text-transform: lowercase;
+    }
+
+    .underline {
+      width: 100%;
+      height: 3px;
+      background-color: #f15025;
+    }
+
+    .intro ul li {
+      list-style-position: outside;
+      margin: 16px 16px;
+      font-size: 17px;
+    }
+
+    .intro ul li::before {
+      content: '\2022';
+      color: red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    span {
+      font-size: 16px;
+    }
+    a {
+      font-size: 20px;
+      color: #fff;
+    }
+
+    /* align-items*/
+
+    .grid-container {
+      width: 75rem;
+      min-height: 100vh;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      align-items: stretch;
+      align-items: center;
+      align-items: flex-start;
+      align-items: flex-end;
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26);
+    }
+
+    .cell {
+      padding: 2rem;
+      background: #dedede;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: center;
+      border: 3px solid red;
+      color: #fff;
+    }
+
+    .cell-1 {
+      background: #581f18;
+    }
+    .cell-2 {
+      background: #f0a202;
+    }
+    .cell-3 {
+      background: #d95d39;
+    }
+    .cell-4 {
+      background: #202c59;
+    }
+    .cell-5 {
+      background: #51cb20;
+    }
+    .cell-6 {
+      background: brown;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>align-items : property</h1>
+        <div class="underline"></div>
+      </div>
+      <div class="intro">
+        <ul>
+          <li>
+            The align-items property specifies the default alignment for items
+            inside a flexbox or grid container.
+          </li>
+          <li>
+            For this property to have any alignment effect, the items need
+            available space around themselves in the appropriate direction.
+          </li>
+          <li>
+            possible values for align-items : property
+            <ul>
+              <li>
+                stretch (default) -
+                <span>Items are stretched to fit the container</span>
+              </li>
+              <li>
+                center -
+                <span>Items are positioned at the center of the container</span>
+              </li>
+              <li>
+                flex-start -
+                <span
+                  >Items are positioned at the beginning of the container</span
+                >
+              </li>
+              <li>
+                flex-end -
+                <span>Items are positioned at the end of the container</span>
+              </li>
+              <li>
+                start -
+                <span
+                  >Items are positioned at the beginning of their individual
+                  grid cells, in the block direction</span
+                >
+              </li>
+              <li>
+                end -
+                <span
+                  >Items are positioned at the end of the their individual grid
+                  cells, in the block direction</span
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- color values -->
+    <section class="grid-container">
+      <div class="cell cell-1">cell 1</div>
+      <div class="cell cell-2">cell 2</div>
+      <div class="cell cell-3">cell 3</div>
+      <div class="cell cell-4">cell 4</div>
+      <div class="cell cell-5">cell 5</div>
+      <div class="cell cell-6">cell 6</div>
+    </section>
+  </body>
+</html>
