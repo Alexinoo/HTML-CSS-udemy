@@ -163,6 +163,8 @@ Hero
 Cards
 ===============
 */
+
+/* small screen */
 .cards {
   padding: 4rem 0;
 }
@@ -195,4 +197,20 @@ Cards
 }
 .card-footer span {
   color: var(--primaryColor);
+}
+
+/* starting from 768px - Two column layout*/
+@media screen and (min-width: 768px) {
+  .cards-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+}
+
+/* starting from 1170px - Three column layout*/
+@media screen and (min-width: 1170px) {
+  .cards-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
