@@ -249,3 +249,10 @@ divide by 4 columns to get equal sides width for each card
   /* grid-template-columns: repeat(auto-fit, minmax(368px, 1fr)); */
   grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
 }
+
+/* row-height */
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
