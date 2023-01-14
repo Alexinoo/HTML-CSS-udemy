@@ -270,7 +270,12 @@ Sidebar
   transition: var(--transition);
 
   /* add later */
-  /* transform: translateX(-100%); */
+  transform: translateX(-100%);
+}
+
+/* sidebar Toggle functionality */
+.show-sidebar {
+  transform: translateX(0);
 }
 
 .close-btn {
