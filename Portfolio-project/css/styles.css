@@ -404,7 +404,8 @@ Hero
   }
 
   /* Frame */
-  .hero-img::before {
+  .hero-img::before,
+  .about-img::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -446,6 +447,25 @@ About
 
 .about-img {
   justify-self: center;
+}
+
+/* strating from 992px
+  - 2 column layout (place about-img and about-img side by side )
+*/
+
+@media screen and (min-width: 992px) {
+  .about-center {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-img {
+    position: relative;
+  }
+  .about-img::before {
+    left: -2rem;
+  }
+  .about-info {
+    align-self: center;
+  }
 }
 
 /*
