@@ -818,6 +818,81 @@ Timeline
 ===============
 */
 
+.timeline-center {
+  width: 90vw;
+  max-width: 40rem;
+}
+
+.timeline-item {
+  border-top: 3px dashed var(--clr-primary-5);
+  margin: 0;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.timeline-item p {
+  margin-bottom: 0;
+}
+
+.timeline-item:nth-child(even) {
+  border-left: 3px dashed var(--clr-primary-5);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  margin-right: 2rem;
+  padding-right: 0;
+}
+
+.timeline-item:nth-child(odd) {
+  border-right: 3px dashed var(--clr-primary-5);
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  margin-left: 2rem;
+  padding-left: 0;
+}
+
+/* remove top border on the first-child */
+/* straighten the edge for the top-right-border */
+
+.timeline-item:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+}
+
+/* straighten the edge for the bottom-left-border */
+.timeline-item:last-child {
+  border-bottom-left-radius: 0;
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 0;
+  background: var(--clr-primary-5);
+  /* width and height useful for padding and border-radius to work */
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  /* center the numbers using grid */
+  display: grid;
+  place-items: center;
+  color: var(--clr-primary-1);
+  font-weight: bold;
+}
+
+/* Select even and place the number on the left */
+.timeline-item:nth-child(even) .number {
+  left: 0;
+}
+/* 
+  -Select even and place the number on the right 
+  - Tricky one - use transform translate to place the number in the center 
+*/
+.timeline-item:nth-child(odd) .number {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
 /*
 =============== 
 Blog
