@@ -28,9 +28,37 @@ Variables
 */
 
 :root {
+  /* colors */
+
+  /* lightest shades */
+  --primary-100: #e0deff;
+  --primary-200: #c1beff;
+  --primary-300: #a29dff;
+  --primary-400: #837dff;
+
+  /* primary */
+  --primary-500: #645cff;
+
+  /* darkest shades */
+  --primary-600: #504acc;
+  --primary-700: #3c3799;
+  --primary-800: #282566;
+  --primary-900: #141233;
+
+  /* grey */
+  --black: #222;
+  --white: #fff;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+
+  /* fonts */
   --headingFont: 'Spectral', serif;
   --bodyFont: 'Karla', sans-serif;
   --smallText: 0.7em;
+
+  /* rest of the vars */
 }
 
 body {
