@@ -174,3 +174,33 @@ ul {
   list-style-type: none;
   padding: 0;
 }
+
+/* Images 
+    - By default , images comes with their own width and height
+    - Normally controlled with the parent container
+      - If you set the width of the parent container then the width of the img needs to be 100%
+      - If you set the height of the parent container then the height of the img needs to be 100%
+    - Images by default are inline - if you don't add display:block , you will have weird space below the container
+    - Object-fit:cover ensures that the image is not distorted - if width/height has been specified
+    - use of classes when selecting images (more-control)
+      - Exclude logo which does not need to span 100% (default setup)
+      /* Exclude logo */
+/* img:not(.nav-logo) {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+          } 
+      
+  */
+.container {
+  width: 40vw;
+  border: 1px solid var(--primary-500);
+  border-radius: var(--borderRadius);
+  max-width: var(--max-width);
+}
+
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
