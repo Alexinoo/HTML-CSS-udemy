@@ -255,3 +255,24 @@ ul {
 .btn-block {
   width: 100%;
 }
+
+/* Alerts
+
+*/
+
+.alert {
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 1rem;
+  border-color: transparent;
+  border-radius: var(--borderRadius);
+}
+
+.alert-danger {
+  background: var(--red-light);
+  color: var(--red-dark);
+}
+
+.alert-success {
+  background: var(--green-light);
+  color: var(--green-dark);
+}
