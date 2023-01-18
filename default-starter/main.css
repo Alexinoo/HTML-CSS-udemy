@@ -1,6 +1,6 @@
 /* temp */
 body {
-  padding: 2rem 5rem;
+  padding: 2rem 2rem;
 }
 /* temp */
 
@@ -258,6 +258,14 @@ ul {
 
 /* Alerts
 
+  - Add generic styles
+      .alert {
+      }
+
+  - Add styles specific to that button
+     .alert-danger{}
+     .alert-success{}
+
 */
 
 .alert {
@@ -275,4 +283,106 @@ ul {
 .alert-success {
   background: var(--green-light);
   color: var(--green-dark);
+}
+
+/* FORMS 
+=========
+
+Form
+=======
+  - Starting with the small screen (set width to 90% of the screen size)
+  - Set max-width (Don't get bigger than 600px for big screens)
+  - Add background-color
+  - Add border radius
+  - Add box-shadow
+  - Add top/bottom and left/right padding
+  - Either set a container to be parent to the form and use it for centering / Apply it directly on the form  (use margin :3rem auto)
+
+Labels
+========
+  - Use display:block to start in new line
+  - Font-size - Use small text (em) dependent on the parent
+  - Add margin-bottom
+  - Capitalize the label
+  - Add letter spacing
+
+Form Input -vs- Textarea
+======================
+  - We can group this 2 since they will have the same styles instead of doing it separately
+  - Set width to 100% - prefers input spanning 100% of the width of the form
+  - Add some padding (top/bottom left/right)
+  - Add border radius to get nice rounded corners
+  - Add background color (lightest gray of 50)
+  - Add border (1px solid gray-200)
+
+Form row
+=========
+
+   - Add some distance between the rows
+
+
+Form Textarea
+=============
+
+   - Control rows/column using CSS
+   - Since we aleady set the width we can just do height which might vary with different projects
+
+Placeholder
+=============
+   - Inherit font family from the parent
+   - Add color of your choice
+
+
+Error messages - Mainly Added dynamically
+==============
+
+   - Use small element (HTML)
+   - Uses specified font-size from the default setup
+  
+*/
+
+.form {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  padding: 2rem 2.5rem;
+  margin: 3rem auto;
+}
+
+.form-label {
+  display: block;
+  font-size: var(--smallText);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--borderRadius);
+  background: var(--backgroundColor);
+  border: 1px solid var(--grey-200);
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+.form-textarea {
+  height: 7rem;
+}
+
+::placeholder {
+  font-family: inherit;
+  color: var(--grey-400);
+}
+
+.form-alert {
+  color: var(--red-dark);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
 }
