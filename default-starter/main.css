@@ -411,3 +411,41 @@ Error messages - Mainly Added dynamically
     transform: rotate(360deg);
   }
 }
+
+/* Titles
+    - Wrap it in some kind of a div (use it to align text to the center)
+
+   Underline 
+    - Set some width & height for the line 
+    - Add some bgColor (primary-color)
+    - Center it using :
+                margin:0 auto;
+    - Remove/reduce top margin which is added automatically between the heading and the underline
+
+        .title h2 {
+            margin-bottom:0.25rem;
+        }
+
+    - OR use margin-top : -0.25rem and work with a -ve value
+        .title-underline {
+            margin-top:-0.25rem;
+        }
+*/
+
+.title {
+  text-align: center;
+}
+
+.title-underline {
+  width: 7rem;
+  height: 0.25rem;
+  background: var(--primary-500);
+  margin: 0 auto;
+}
+
+.title h2 {
+  color: var(--grey-600);
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+  margin-bottom: 0.25rem;
+}
