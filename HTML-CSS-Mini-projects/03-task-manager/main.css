@@ -296,3 +296,78 @@ Task Manager
 .text-success {
   color: var(--green-dark);
 }
+
+/*
+=============== 
+Tasks
+===============
+*/
+
+.tasks-container {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.tasks {
+  display: grid;
+  gap: 1rem;
+}
+
+.single-task {
+  background: var(--white);
+  padding: 1rem 2.5rem;
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  transition: var(--transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single-task:hover {
+  box-shadow: var(--shadow-4);
+}
+
+.single-task h5 {
+  margin-bottom: 0;
+}
+
+.single-task .fa-check-circle {
+  margin-left: -1.25rem;
+  margin-right: 1.5rem;
+  font-size: 1rem;
+  color: var(--green-dark);
+  visibility: hidden;
+}
+
+.task-completed {
+  text-decoration: line-through;
+}
+
+.task-completed .fa-check-circle {
+  visibility: visible;
+}
+
+.task-links {
+  display: flex;
+  align-items: center;
+  gap: 0 0.75rem;
+}
+
+.edit-link,
+.delete-btn {
+  background: transparent;
+  border: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.edit-link {
+  color: var(--green-dark);
+}
+.delete-btn {
+  color: var(--red-dark);
+}
