@@ -320,3 +320,65 @@ Navbar
 }
 
 /* todo .show-links */
+
+/* Starting from 800px
+    - Hide nav-toggle button
+    - Set max-width for .nav-center 
+       - Display flex (space-between and vertically in the center)
+    -Remove padding added to the .nav-header
+    - Set .links as d-flex
+       - (space-between and vertically in the center)
+       - height (set to auto) - Todo
+    - Target actual links and ovewrite the following done in the small screen setup
+       - background (to transparent)
+       - padding (remove padding)
+
+    - Show social icons (d-flex)
+    - Target individual-icon
+       - add margin right/left
+*/
+@media screen and (min-width: 800px) {
+  .nav-header .nav-toggle {
+    display: none;
+  }
+  .nav-center {
+    border: 1px solid crimson;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+
+  .links {
+    display: flex;
+    /* todo height */
+  }
+
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+
+  .links a:hover {
+    background: transparent;
+    padding: 0;
+  }
+
+  .social-links {
+    display: flex;
+  }
+
+  .social-links a {
+    margin: 0 0.5rem;
+    color: var(--primary-500);
+    transition: var(--transition);
+  }
+  .social-links a:hover {
+    color: var(--primary-300);
+  }
+}
