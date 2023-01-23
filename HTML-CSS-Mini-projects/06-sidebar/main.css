@@ -304,13 +304,18 @@ Sidebar
   transition: var(--transition);
 
   /* todo 
-          - Hide sidebar      
+          - Hide sidebar 
+          - Whatever is the width of the sidebar (take 100% of it)  and translate it 100%    
   */
+  transform: translate(-100%);
 }
 
 /* todo 
           - show sidebar      
   */
+.show-sidebar {
+  transform: translate(0);
+}
 
 /* Starting from 676px
     - set some fixed with (so does it not span 100%)
